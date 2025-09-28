@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulario de Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Formulario de Contacto</h1>
+    </header>
+    <hr />
+    <br />
+    <br />
+    <section>
+      <form action="../PHP/verForm.php" method="post">
+        <article>
+          <label style="font-size: 20px"
+            ><strong>Nombre y Apellidos:</strong>
+            <input
+              type="text"
+              id="nombreApellido"
+              name="nombreApellido"
+              required
+              style="width: 300px; height: 20px"
+              placeholder="Ej: Fernando Fernandez Fernandez"
+            />
+          </label>
+        </article>
+
+        <br />
+
+        <article>
+          <label style="font-size: 20px"
+            ><strong>Correo:</strong>
+
+            <input
+              type="text"
+              id="correo"
+              name="correo"
+              required
+              style="width: 300px; height: 20px"
+            />
+          </label>
+        </article>
+
+        <br />
+
+        <article>
+          <label style="font-size: 20px"
+            ><strong>Fecha nacimiento:</strong>
+            <input
+              type="date"
+              id="fechanacimiento"
+              name="fechanacimiento"
+              required
+              style="height: 20px"
+            />
+          </label>
+        </article>
+
+        <br />
+
+        <article>
+          <label style="font-size: 20px"><strong>Sexo:</strong></label>
+          <input type="radio" id="Hombre" name="sex" value="H" required />
+          <label for="Hombre">Hombre</label>
+
+          <input type="radio" id="Mujer" name="sex" value="M" required />
+          <label for="Mujer">Mujer</label>
+        </article>
+        <br />
+
+        <article>
+          <label style="font-size: 20px"
+            ><strong>Codigo postal:</strong>
+            <input
+              type="text"
+              name="codigo"
+              required
+              pattern="[0-9]{5}"
+              placeholder="Ej: 03440"
+              maxlength="5"
+              style="width: 300px; height: 20px"
+            />
+          </label>
+        </article>
+
+        <br />
+        <label style="font-size: 20px"><strong>Ciclo:</strong></label>
+        <select
+          id="ciclo"
+          name="ciclo"
+          required
+          style="width: 300px; height: 30px"
+        >
+          <option value="" disabled selected>Selecciona un ciclo</option>
+          <option value="DAW">Diseño de aplicaciones Web</option>
+          <option value="DAM">
+            Desarrollo de aplicaciones Multiplataforma
+          </option>
+          <option value="ASIX">
+            Administración de Sistemas Informáticos en Red
+          </option>
+        </select>
+
+        <br />
+
+        <article>
+          <label style="font-size: 20px"
+            ><strong>Frameworks que conoces:</strong></label
+          >
+          <br />
+
+          <input type="checkbox" name="frameworks[]" value="Angular" /> Angular
+          <br />
+          <input type="checkbox" name="frameworks[]" value="Vue"/>Vue<br />
+          <input type="checkbox" name="frameworks[]" value="React"/>React<br />
+          <input type="checkbox" name="frameworks[]" value="Symfony"/>Symfony<br />
+          <input type="checkbox" name="frameworks[]" value="Laravel"/>Laravel<br />
+        </article>
+        <br />
+        <article>
+          <label style="font-size: 20px"
+            ><strong
+              >Acepta las condiciones de servicio y nuestra política de
+              privacidad</strong
+            >
+            <input type="checkbox" name="politica" id="politica" required />
+          </label>
+        </article>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </body>
+</html>

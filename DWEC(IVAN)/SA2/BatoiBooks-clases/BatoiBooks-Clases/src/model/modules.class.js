@@ -1,5 +1,4 @@
 import Module from "./module.class.js";
-import User from "./user.class.js";
 export default class Modules {
     constructor() {
         this.data = [];

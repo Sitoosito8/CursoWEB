@@ -6,8 +6,6 @@ export default class User {
         this.password = password;
     }
 
-
-
     toString() {
         return "Id Usuario :" + this.id + "/nNick Usuario :" + this.nick + "/n" +
             "Email Usuario : " + this.email + "/nContrasenya Usuario: " + this.password;

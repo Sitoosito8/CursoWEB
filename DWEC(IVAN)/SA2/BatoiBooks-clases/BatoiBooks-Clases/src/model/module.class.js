@@ -6,8 +6,6 @@ export default class Module {
         this.courseId = courseId;
     }
 
-
-
     toString() {
         return "ID Curso :" + this.courseId + "/Codigo Curso :" + this.code + "/n" +
             "Castellano modulo info : " + this.cliteral + "/nValenciano modulo info: " + this.vliteral;

@@ -1,4 +1,4 @@
-class Module {
+export default class Module {
     constructor(code, cliteral,vliteral,courseId) {
         this.code = code;
         this.cliteral = cliteral;

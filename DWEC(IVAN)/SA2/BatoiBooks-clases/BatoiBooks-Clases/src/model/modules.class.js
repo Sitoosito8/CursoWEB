@@ -8,7 +8,7 @@ export default class Modules {
     }
     addModule(moduloArray) {
         let id = 1;
-        if(this.data.length !== 1) id = Math.max(...this.data.map(modulo => modulo.id));
+        if (this.data.length !== 1) id = Math.max(...this.data.map(modulo => modulo.id));
 
         let nuevoModulo = new Module(id, ...moduloArray);
         this.data.push(nuevoModulo);
@@ -26,9 +26,15 @@ export default class Modules {
         this.data[indice] = modulo;
         return modulo;
     }
+    getModuleByCode(moduleCode) {
+        let module = this.data.find(mod => mod.code = moduleCode);
+        if (!module) throw new Error("Error al buscar el modulo por su codigo");
+        return module;
+
+    }
 
     toString() {
         if (this.data.length === 0) return [];
-        return this.data.map(modul => modul.toString()).join("\n");
+        return this.data.map(libro => libro.toString()).join("\n");
     }
 }

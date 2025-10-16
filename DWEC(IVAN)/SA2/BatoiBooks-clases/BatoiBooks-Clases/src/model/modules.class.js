@@ -3,8 +3,9 @@ export default class Modules {
     constructor() {
         this.data = [];
     }
+    
     populate(datosModulo) {
-        this.data = datosModulo.map(modul => new Module(modul));
+        this.data = datosModulo.map(modul => new Module(modul.code, modul.cliteral,modul.vliteral, modul.courseId));
     }
     addModule(moduloArray) {
         let id = 1;

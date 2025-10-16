@@ -28,7 +28,7 @@ export default class Modules {
         return modulo;
     }
     getModuleByCode(moduleCode) {
-        let module = this.data.find(mod => mod.code = moduleCode);
+        let module = this.data.find(mod => mod.code === moduleCode);
         if (!module) throw new Error("Error al buscar el modulo por su codigo");
         return module;
 

@@ -1,4 +1,4 @@
-import Book from './book.class.js';
+import Book from './book.class';
 
 export default class Books {
     constructor() {
@@ -9,11 +9,9 @@ export default class Books {
         this.data = datosLibros.map(libro => new Book(libro));
     }
 
-    addBook(librosArray) {
-
-        let id = 1;
-        if (this.data.length !== 1) id = Math.max(...this.data.map(libro => libro.id)) + 1
-        let nuevoLibro = new Book(id, ...librosArray);
+    addBook(objetoLibro) {
+        let nuevoid = this.data.length > 0 ? Math.max(...this.data.map(libro => libro.id)) + 1 : 1;
+        let nuevoLibro = new Book({id:nuevoid,...objetoLibro});
         this.data.push(nuevoLibro);
         return nuevoLibro;
     }

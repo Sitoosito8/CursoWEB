@@ -11,7 +11,7 @@ export default class Books {
 
     addBook(objetoLibro) {
         let nuevoid = this.data.length > 0 ? Math.max(...this.data.map(libro => libro.id)) + 1 : 1;
-        let nuevoLibro = new Book({id:nuevoid,...objetoLibro});
+        let nuevoLibro = new Book({ id: nuevoid, ...objetoLibro });
         this.data.push(nuevoLibro);
         return nuevoLibro;
     }
@@ -27,9 +27,24 @@ export default class Books {
     changeBook(libro) {
         let indice = this.data.findIndex(lib => lib.id === libro.id);
         if (indice === -1) throw new Error("Error al hacer cambios sobre los libros");
-        this.data[indice] = libro;
-        return libro;
+        this.data[indice] = new Book(libro);
+        return this.data[indice];
     }
+
+    getBookById() { }
+
+    getBookIndexById() { }
+    bookExists() { }
+    booksFromUser() { }
+    booksFromModule() { }
+    booksCheeperThan() { }
+    booksWithStatus() { }
+    averagePriceOfBooks() { }
+    booksOfTypeNotes() { }
+    booksNotSold() { }
+    incrementPriceOfbooks() { }
+
+
 
     toString() {
         if (this.data.length === 0) return [];

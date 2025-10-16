@@ -8,9 +8,9 @@ export default class Book {
         this.price = dato.price;
         this.pages = dato.pages;
         this.status = dato.status;
-        this.soldDate = dato.soldDate;
-        this.photo = dato.photo;
-        this.comments = dato.comments;
+        this.soldDate = dato.soldDate ?? "";
+        this.photo = dato.photo ?? "";
+        this.comments = dato.comments ?? "";
     }
 
     toString() {

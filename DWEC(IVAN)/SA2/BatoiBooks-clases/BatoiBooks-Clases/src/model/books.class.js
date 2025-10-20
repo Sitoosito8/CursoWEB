@@ -1,4 +1,4 @@
-import Book from './book.class';
+import Book from './book.class.js';
 
 export default class Books {
     constructor() {

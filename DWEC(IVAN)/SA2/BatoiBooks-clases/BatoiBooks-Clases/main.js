@@ -13,17 +13,19 @@ usuarios.populate(data.users);
 
 let librosModulos = libros.booksFromModule("5021");
 
+console.log("Mostramos por consola todos los libros del módulo 5021");
 librosModulos.forEach(libroMod => {
     console.log(libroMod);
 })
 
 let librosEstado = libros.booksWithStatus("new");
+console.log("Mostramos los que están nuevos (estado new)");
 librosEstado.forEach(libroEst => {
     console.log(libroEst);
 })
 
 let librosIncrement = libros.incrementPriceOfbooks(10);
-
+console.log("Incrementamos un 10% el precio de los libros y los mostramos por consola");
 librosIncrement.forEach(libroInc =>{
     console.log(libroInc);
 })

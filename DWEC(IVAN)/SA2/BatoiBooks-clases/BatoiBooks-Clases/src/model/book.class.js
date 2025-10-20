@@ -1,5 +1,4 @@
 export default class Book {
-    //
     constructor(dato = {}) {
         this.id = dato.id;
         this.userId = dato.userId;
